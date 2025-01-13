@@ -496,7 +496,7 @@ a {
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
-  color: rgb(0.6339712919, 88.1220095694, 131.8660287081);
+  color: rgb(31.5741626794, 179.8086124402, 253.9258373206);
   text-decoration: underline;
 }
 
@@ -615,67 +615,74 @@ img {
 /**
  * Grid
  */
-.grid-item {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.flex-small,
+.flex-large {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-.grid-row {
-  margin-left: -1rem;
-  margin-right: -1rem;
+.flex-row {
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
 
-.grid-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
 }
 
-.grid-item {
-  margin-bottom: 1rem;
+.flex-small,
+.flex-large {
+  flex-basis: 100%;
+  margin-bottom: 2rem;
 }
 
 /* Small screen breakpoint */
 @media (min-width: 600px) {
-  .grid-row {
-    grid-template-columns: repeat(2, 1fr);
+  .flex-small {
+    flex: 1;
+    margin-bottom: 0;
   }
-  .grid-item.half {
-    grid-column: span 1;
+  .flex-small.half {
+    flex: 0 0 50%;
   }
-  .grid-item.one-fourth {
-    grid-column: span 1;
+  .flex-small.one-fourth {
+    flex: 0 0 25%;
   }
-  .grid-item.three-fourths {
-    grid-column: span 2;
+  .flex-small.three-fourths {
+    flex: 0 0 75%;
   }
-  .grid-item.one-third {
-    grid-column: span 1;
+  .flex-small.one-third {
+    flex: 0 0 33.3333333333%;
   }
-  .grid-item.two-thirds {
-    grid-column: span 2;
+  .flex-small.two-thirds {
+    flex: 0 0 66.6666666667%;
   }
 }
 /* Large screen breakpoint */
 @media (min-width: 1000px) {
-  .grid-row {
-    grid-template-columns: repeat(4, 1fr);
+  .flex-large {
+    flex: 1;
+    margin-bottom: 0;
   }
-  .grid-item.half {
-    grid-column: span 2;
+  .flex-large.half {
+    flex: 0 0 50%;
   }
-  .grid-item.one-fourth {
-    grid-column: span 1;
+  .flex-large.one-fourth {
+    flex: 0 0 25%;
   }
-  .grid-item.three-fourths {
-    grid-column: span 3;
+  .flex-large.three-fourths {
+    flex: 0 0 75%;
   }
-  .grid-item.one-third {
-    grid-column: span 2;
+  .flex-large.one-third {
+    flex: 0 0 33.3333333333%;
   }
-  .grid-item.two-thirds {
-    grid-column: span 3;
+  .flex-large.two-thirds {
+    flex: 0 0 66.6666666667%;
   }
 }
 /**
@@ -794,13 +801,13 @@ img {
   color: #ffffff;
 }
 .alternate-background .accent-button {
-  border: 2px solid rgb(11.9210526316, 25.3322368421, 63.5789473684);
-  background: rgb(11.9210526316, 25.3322368421, 63.5789473684);
+  border: 2px solid rgb(36.0789473684, 76.6677631579, 192.4210526316);
+  background: rgb(36.0789473684, 76.6677631579, 192.4210526316);
 }
 .alternate-background .accent-button:hover, .alternate-background .accent-button:focus, .alternate-background .accent-button:active {
   color: #ffffff;
-  border: 2px solid rgb(3.8684210526, 8.2203947368, 20.6315789474);
-  background: rgb(3.8684210526, 8.2203947368, 20.6315789474);
+  border: 2px solid rgb(60.8947368421, 101.8388157895, 218.6052631579);
+  background: rgb(60.8947368421, 101.8388157895, 218.6052631579);
 }
 
 .space-between {
@@ -862,15 +869,15 @@ img {
 }
 
 .button:hover, a.button:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
-  border: 2px solid rgb(13, 180.2460732984, 255);
-  background: rgb(13, 180.2460732984, 255);
+  border: 2px solid rgb(115, 211.7539267016, 255);
+  background: rgb(115, 211.7539267016, 255);
   color: #000000;
   text-decoration: none;
 }
 
 .button:focus, .button:active, a.button:focus, a.button:active, button:focus, button:active, [type=submit]:focus, [type=submit]:active, [type=reset]:focus, [type=reset]:active, [type=button]:focus, [type=button]:active {
-  border: 2px solid rgb(13, 180.2460732984, 255);
-  background: rgb(13, 180.2460732984, 255);
+  border: 2px solid rgb(115, 211.7539267016, 255);
+  background: rgb(115, 211.7539267016, 255);
   color: #000000;
   text-decoration: none;
 }
@@ -890,8 +897,8 @@ a.accent-button:hover,
 a.accent-button:focus,
 a.accent-button:active {
   color: #ffffff;
-  border: 2px solid rgb(15.9473684211, 33.8881578947, 85.0526315789);
-  background: rgb(15.9473684211, 33.8881578947, 85.0526315789);
+  border: 2px solid rgb(32.0526315789, 68.1118421053, 170.9473684211);
+  background: rgb(32.0526315789, 68.1118421053, 170.9473684211);
 }
 
 .muted-button,
@@ -904,8 +911,8 @@ a.muted-button {
 a.muted-button:hover,
 a.muted-button:focus,
 a.muted-button:active {
-  color: rgb(77.5, 77.5, 77.5);
-  border: 2px solid rgb(0, 114.722513089, 166);
+  color: hsl(0, 0%, 130.3921568627%);
+  border: 2px solid rgb(217, 243.2617801047, 255);
   background: transparent;
 }
 
@@ -943,7 +950,7 @@ a.full-button {
 }
 
 [type=color]:hover, [type=date]:hover, [type=datetime]:hover, [type=datetime-local]:hover, [type=email]:hover, [type=month]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=url]:hover, [type=week]:hover, [type=time]:hover, select:hover, textarea:hover {
-  border: 2px solid #9a9a9a;
+  border: 2px solid hsl(0, 0%, 100.3921568627%);
 }
 
 [type=color]:focus, [type=color]:active, [type=date]:focus, [type=date]:active, [type=datetime]:focus, [type=datetime]:active, [type=datetime-local]:focus, [type=datetime-local]:active, [type=email]:focus, [type=email]:active, [type=month]:focus, [type=month]:active, [type=number]:focus, [type=number]:active, [type=password]:focus, [type=password]:active, [type=search]:focus, [type=search]:active, [type=tel]:focus, [type=tel]:active, [type=text]:focus, [type=text]:active, [type=url]:focus, [type=url]:active, [type=week]:focus, [type=week]:active, [type=time]:focus, [type=time]:active, select:focus, select:active, textarea:focus, textarea:active {
@@ -1034,7 +1041,7 @@ textarea.is-success:active {
 ::-moz-placeholder,
 :-moz-placeholder,
 :-ms-input-placeholder {
-  color: #9a9a9a;
+  color: hsl(0, 0%, 100.3921568627%);
 }
 
 input[type=checkbox], input[type=radio] {

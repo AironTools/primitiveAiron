@@ -127,14 +127,14 @@
   }
   
   .accent-button{
-    border: 2px solid darken($accent-button-background, 15%);
-    background: darken($accent-button-background, 15%);
+    border: 2px solid color.adjust($accent-button-background,  $lightness: 15%);
+    background: color.adjust($accent-button-background,  $lightness: 15%);
     &:hover,
     &:focus,
     &:active {
       color: $accent-button-color-hover;
-      border: 2px solid darken($accent-button-background, 25%);
-      background: darken($accent-button-background, 25%);
+      border: 2px solid color.adjust($accent-button-background, $lightness: 25%);
+      background: color.adjust($accent-button-background,  $lightness: 25%);
     }
   }
 

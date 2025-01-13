@@ -55,7 +55,7 @@ $accent-color: #cdcdcd !default;
 $alternate-background: #183380 !default;
 $alternate-color: #ffffff !default;
 $link-color: #018BD0 !default;
-$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-color: color.adjust($link-color, $lightness: 15%) !default;
 $highlight: #FFC021 !default;
 $error: #d33c40 !default;
 $success: #29de7d !default;
@@ -119,7 +119,7 @@ $borders: $border-width $border-style $border-color !default;
 //==============================================================================
 
 $button-background: $primary-color !default;
-$button-background-hover: darken($button-background, 10%) !default;
+$button-background-hover: color.adjust($button-background, $lightness: 10%) !default;
 $button-color: #000000 !default;
 $button-font-weight: 700 !default;
 $button-font-family: 'Manrope',-apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
@@ -137,11 +137,11 @@ $accent-button-color-hover: #ffffff !default;
 
 // Muted Buttons
 $muted-border: 2px solid $primary-color !default;
-$muted-border-hover: 2px solid darken($primary-color, 30%) !default;
+$muted-border-hover: 2px solid color.adjust($primary-color, $lightness: 30%) !default;
 $muted-background: transparent !default;
 $muted-background-hover: transparent !default;
 $muted-color: #000000 !default;
-$muted-color-hover: darken($accent-color, 50%) !default;
+$muted-color-hover: color.adjust($accent-color,$lightness: 50%) !default;
 
 // Round Buttons
 $round-buttons: 40px !default;
@@ -155,9 +155,9 @@ $forms: (
 ) !default;
 $buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]') !default;
 $input-background: #ffffff !default;
-$placeholder: darken($accent-color, 20%) !default;
+$placeholder: color.adjust($accent-color, $lightness: 20%) !default;
 $form-border: 2px solid $border-color !default;
-$form-border-hover: 2px solid  darken($accent-color, 20%) !default;
+$form-border-hover: 2px solid  color.adjust($accent-color, $lightness: 20%) !default;
 $form-border-focus: 2px solid $link-color !default;
 
 //==============================================================================
