@@ -8,6 +8,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
   font-size: $font-size;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 // Body base
@@ -49,6 +51,10 @@ h5 {
   &:not(:first-child) {
     margin: 1.5rem 0;
   }
+  
+}
+strong {
+  color: $link-color;
 }
 
 // Increased margin on additional headings
@@ -239,4 +245,14 @@ dd {
   .content-section {
     padding: $content-padding;
   }
+}
+
+img{
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  object-fit:contain;
+  max-height: 100%;
+  max-width: 100%;    
+  display: block;
+  margin: auto auto;
 }

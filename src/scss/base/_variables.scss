@@ -3,6 +3,29 @@
  *
  * The majority of the configuration for the toolkit.
  */
+ @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+ /* Definir la fuente local con @font-face */
+ @font-face {
+     font-family: 'Manrope';
+     src: url('/assets/Manrope/Manrope-Regular.ttf') format('truetype');
+     font-weight: 400;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'Manrope';
+     src: url('/assets/Manrope/Manrope-Bold.ttf') format('truetype');
+     font-weight: 700;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'Manrope';
+     src: url('/assets/Manrope/Manrope-ExtraBold.ttf') format('truetype');
+     font-weight: 800;
+     font-style: normal;
+ }
 
 //==============================================================================
 // Containers
@@ -25,51 +48,52 @@ $desktop: $medium !default;
 // Global Colors
 //==============================================================================
 
-$background: white !default;
-$primary-color: #0366ee !default;
-$secondary-color: #29de7d !default;
+$background: #E6F2FF !default;
+$primary-color: #40C4FF !default;
+$secondary-color: #183380 !default;
 $accent-color: #cdcdcd !default;
-$alternate-background: #fafafa !default;
-$alternate-color: #404040 !default;
-$link-color: $primary-color !default;
+$alternate-background: #183380 !default;
+$alternate-color: #ffffff !default;
+$link-color: #018BD0 !default;
 $link-hover-color: darken($link-color, 15%) !default;
-$highlight: #ffeea8 !default;
+$highlight: #FFC021 !default;
 $error: #d33c40 !default;
 $success: #29de7d !default;
-$bq-border: 16px solid #f0f0f0 !default;
+$bq-border: 16px solid #8b95ac !default;
+$box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
 //==============================================================================
 // Typography
 //==============================================================================
 
 // Body
-$font-size: 1rem !default;
-$body-font-size: 1rem !default;
+$font-size: 16px !default;
+$body-font-size: 1.25rem !default;
 $font-style: normal !default;
 $font-variant: normal !default;
 $font-weight: normal !default;
-$font-color: #404040 !default;
-$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
-$line-height: 1.6 !default;
+$font-color: #333333 !default;
+$font-family: 'Manrope', Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
+$line-height: 1.5 !default;
 
 // Headings
-$heading-font-color: #404040 !default;
-$heading-font-weight: 600 !default;
-$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial,
+$heading-font-color: #333333 !default;
+$heading-font-weight: 700 !default;
+$heading-font-family: 'Manrope',-apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial,
   sans-serif !default;
 $heading-line-height: 1.2 !default;
 
-$h1-mobile: 1.75rem !default;
-$h2-mobile: 1.5rem !default;
-$h3-mobile: 1.25rem !default;
-$h4-mobile: 1.1rem !default;
+$h1-mobile: 2.5rem !default;
+$h2-mobile: 2rem !default;
+$h3-mobile: 1.75rem !default;
+$h4-mobile: 1.25rem !default;
 $h5-mobile: 1rem !default;
 
-$h1: 2.25rem !default;
-$h2: 2rem !default;
-$h3: 1.75rem !default;
-$h4: 1.5rem !default;
-$h5: 1.25rem !default;
+$h1: 4.5rem !default;
+$h2: 3rem !default;
+$h3: 2rem !default;
+$h4: 1.75rem !default;
+$h5: 1.5rem !default;
 
 //==============================================================================
 // Spacing
@@ -84,10 +108,10 @@ $content-padding-mobile: 30px 0 !default;
 // Borders
 //==============================================================================
 
-$border-width: 1px !default;
+$border-width: 2px !default;
 $border-style: solid !default;
-$border-color: #dedede !default;
-$border-radius: 4px !default;
+$border-color: #40C4FF !default;
+$border-radius: 8px !default;
 $borders: $border-width $border-style $border-color !default;
 
 //==============================================================================
@@ -96,11 +120,11 @@ $borders: $border-width $border-style $border-color !default;
 
 $button-background: $primary-color !default;
 $button-background-hover: darken($button-background, 10%) !default;
-$button-color: #ffffff !default;
-$button-font-weight: 600 !default;
-$button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
+$button-color: #000000 !default;
+$button-font-weight: 700 !default;
+$button-font-family: 'Manrope',-apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $button-font-size: 1rem !default;
-$button-border-width: 1px !default;
+$button-border-width: 2px !default;
 $button-border-style: solid !default;
 $button-border-color: $button-background !default;
 $button-border-radius: $border-radius !default;
@@ -112,11 +136,11 @@ $accent-button-color: #ffffff !default;
 $accent-button-color-hover: #ffffff !default;
 
 // Muted Buttons
-$muted-border: 1px solid $accent-color !default;
-$muted-border-hover: 1px solid darken($accent-color, 30%) !default;
+$muted-border: 2px solid $primary-color !default;
+$muted-border-hover: 2px solid darken($primary-color, 30%) !default;
 $muted-background: transparent !default;
 $muted-background-hover: transparent !default;
-$muted-color: darken($accent-color, 50%) !default;
+$muted-color: #000000 !default;
 $muted-color-hover: darken($accent-color, 50%) !default;
 
 // Round Buttons
@@ -130,18 +154,18 @@ $forms: (
   '[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email],        [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea'
 ) !default;
 $buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]') !default;
-$input-background: transparent !default;
+$input-background: #ffffff !default;
 $placeholder: darken($accent-color, 20%) !default;
-$form-border: 1px solid $border-color !default;
-$form-border-hover: 1px solid darken($border-color, 10%) !default;
-$form-border-focus: 1px solid $link-color !default;
+$form-border: 2px solid $border-color !default;
+$form-border-hover: 2px solid  darken($accent-color, 20%) !default;
+$form-border-focus: 2px solid $link-color !default;
 
 //==============================================================================
 // Tables
 //==============================================================================
 
-$stripes: #f8f8f8 !default;
-$caption: #ababab !default;
+$stripes: #d3eaff !default;
+$caption: #8b95ac !default;
 
 //==============================================================================
 // Code

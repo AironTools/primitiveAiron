@@ -109,6 +109,38 @@
   color: $alternate-color;
 }
 
+.alternate-background {
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    color: $alternate-color;
+  }
+  strong {
+    color: $primary-color;
+  }
+  
+  .muted-button{
+    color: $alternate-color;
+  }
+  
+  .accent-button{
+    border: 2px solid darken($accent-button-background, 15%);
+    background: darken($accent-button-background, 15%);
+    &:hover,
+    &:focus,
+    &:active {
+      color: $accent-button-color-hover;
+      border: 2px solid darken($accent-button-background, 25%);
+      background: darken($accent-button-background, 25%);
+    }
+  }
+
+}
+
+
 .space-between {
   justify-content: space-between;
 }
@@ -128,4 +160,19 @@
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+.highlighted-paragraph {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.informative-paragraph {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.short-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
 }

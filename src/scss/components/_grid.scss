@@ -2,79 +2,83 @@
  * Grid
  */
 
-$column-padding: 1rem;
-$margin-bottom: 1rem;
-
-// The rows have a negative margin  which are offset by the padding on the columns.
-%column-padding {
-  padding-left: $column-padding;
-  padding-right: $column-padding;
-}
-
-%row-margin {
-  margin-left: -$column-padding;
-  margin-right: -$column-padding;
-}
-
-// Flex row
-.flex-row {
-  @extend %row-margin;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.flex-small,
-.flex-large {
-  @extend %column-padding;
-  flex-basis: 100%;
-  margin-bottom: $margin-bottom;
-}
-
-/* Small screen breakpoint */
-
-@include small-breakpoint {
-  .flex-small {
-    flex: 1;
-    margin-bottom: 0;
-    &.half {
-      flex: 0 0 calc(1 / 2 * 100%);
-    }
-    &.one-fourth {
-      flex: 0 0 calc(1 / 4 * 100%);
-    }
-    &.three-fourths {
-      flex: 0 0 calc(3 / 4 * 100%);
-    }
-    &.one-third {
-      flex: 0 0 calc(1 / 3 * 100%);
-    }
-    &.two-thirds {
-      flex: 0 0 calc(2 / 3 * 100%);
-    }
-  }
-}
-
-/* Large screen breakpoint */
-
-@include large-breakpoint {
-  .flex-large {
-    flex: 1;
-    margin-bottom: 0;
-    &.half {
-      flex: 0 0 calc(1 / 2 * 100%);
-    }
-    &.one-fourth {
-      flex: 0 0 calc(1 / 4 * 100%);
-    }
-    &.three-fourths {
-      flex: 0 0 calc(3 / 4 * 100%);
-    }
-    &.one-third {
-      flex: 0 0 calc(1 / 3 * 100%);
-    }
-    &.two-thirds {
-      flex: 0 0 calc(2 / 3 * 100%);
-    }
-  }
-}
+ $column-padding: 1rem;
+ $margin-bottom: 1rem;
+ 
+ // The rows have a negative margin which are offset by the padding on the columns.
+ %column-padding {
+   padding-left: $column-padding;
+   padding-right: $column-padding;
+ }
+ 
+ %row-margin {
+   margin-left: -$column-padding;
+   margin-right: -$column-padding;
+ }
+ 
+ // Grid row
+ .grid-row {
+   @extend %row-margin;
+   display: grid;
+   grid-template-columns: 1fr; // Default to a single column layout
+   gap: $margin-bottom;
+   padding: $column-padding;
+ }
+ 
+ .grid-item {
+   @extend %column-padding;
+   margin-bottom: $margin-bottom;
+ }
+ 
+ /* Small screen breakpoint */
+ 
+ @include small-breakpoint {
+   .grid-row {
+     grid-template-columns: repeat(2, 1fr); // 2 columns for small screens
+   }
+ 
+   .grid-item {
+     &.half {
+       grid-column: span 1; // Half width in a 2-column layout
+     }
+     &.one-fourth {
+       grid-column: span 1; // Override for 1/4 width
+     }
+     &.three-fourths {
+       grid-column: span 2; // Full width
+     }
+     &.one-third {
+       grid-column: span 1; // 1/3 width (only in multi-column grids)
+     }
+     &.two-thirds {
+       grid-column: span 2; // 2/3 width
+     }
+   }
+ }
+ 
+ /* Large screen breakpoint */
+ 
+ @include large-breakpoint {
+   .grid-row {
+     grid-template-columns: repeat(4, 1fr); // 4 columns for larger screens
+   }
+ 
+   .grid-item {
+     &.half {
+       grid-column: span 2; // Half width in a 4-column layout
+     }
+     &.one-fourth {
+       grid-column: span 1; // 1/4 width
+     }
+     &.three-fourths {
+       grid-column: span 3; // 3/4 width
+     }
+     &.one-third {
+       grid-column: span 2; // Adjust to fit 4 columns
+     }
+     &.two-thirds {
+       grid-column: span 3; // 2/3 width
+     }
+   }
+ }
+ 
