@@ -1,0 +1,44 @@
+// Tamaños de texto en SCSS con clamp() para responsividad
+$text-sizes: (
+  xxxl: (3.6rem, 5vw, 4.7rem),
+  xxl: (2.986rem, 5vw, 3.815rem),
+  xl: (2.488rem, 4.5vw, 3.052rem),
+  l: (2.074rem, 4vw, 2.441rem),
+  m: (1.728rem, 3.5vw, 2.441rem),
+  s: (1.44rem, 3vw, 1.563rem),
+  xs: (1.2rem, 2.5vw, 1.25rem),
+  xxs: (1rem, 2vw, 1rem),
+);
+
+// Aplicación de estilos utilizando clamp() en SCSS
+@each $key, $value in $text-sizes {
+  .text-#{$key} {
+    font-size: clamp(nth($value, 1), nth($value, 2), nth($value, 3));
+  }
+}
+
+// Text alignment
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+// Screen reader text for accessibility
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}

@@ -68,7 +68,7 @@ $box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px
 
 // Body
 $font-size: 16px !default;
-$body-font-size: 1.25rem !default;
+$body-font-size: clamp(1.25rem, 2.5vw, 1.35rem) !default;
 $font-style: normal !default;
 $font-variant: normal !default;
 $font-weight: normal !default;
@@ -81,19 +81,15 @@ $heading-font-color: #333333 !default;
 $heading-font-weight: 700 !default;
 $heading-font-family: 'Manrope',-apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial,
   sans-serif !default;
-$heading-line-height: 1.2 !default;
+$heading-line-height: 1 !default;
 
-$h1-mobile: 2.5rem !default;
-$h2-mobile: 2rem !default;
-$h3-mobile: 1.75rem !default;
-$h4-mobile: 1.25rem !default;
-$h5-mobile: 1rem !default;
 
-$h1: 4.5rem !default;
-$h2: 3rem !default;
-$h3: 2rem !default;
-$h4: 1.75rem !default;
-$h5: 1.5rem !default;
+$h1: clamp(2.986rem, 5vw, 4.7rem) !default;
+$h2: clamp(2.488rem, 4.5vw, 3.052rem) !default;
+$h3: clamp(2.074rem, 4vw, 2.441rem) !default;
+$h4: clamp(1.728rem, 3.5vw, 2.441rem) !default;
+$h5: clamp(1.44rem, 3vw, 1.563rem) !default;
+
 
 //==============================================================================
 // Spacing

@@ -64,56 +64,34 @@ h3:not(:first-child) {
   margin-top: 2rem;
 }
 
-// Heading individual styles
+// Increased margin on additional headings
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child) {
+  margin-top: 2.5rem;
+}
+
+// Heading desktop individual styles
 h1 {
-  font-size: $h1-mobile;
+  font-size: $h1;
 }
 
 h2 {
-  font-size: $h2-mobile;
+  font-size: $h2;
 }
 
 h3 {
-  font-size: $h3-mobile;
+  font-size: $h3;
 }
 
 h4 {
-  font-size: $h4-mobile;
+  font-size: $h4;
 }
 
 h5 {
-  font-size: $h5-mobile;
+  font-size: $h5;
 }
 
-@include small-breakpoint {
-  // Increased margin on additional headings
-  h1:not(:first-child),
-  h2:not(:first-child),
-  h3:not(:first-child) {
-    margin-top: 2.5rem;
-  }
-
-  // Heading desktop individual styles
-  h1 {
-    font-size: $h1;
-  }
-
-  h2 {
-    font-size: $h2;
-  }
-
-  h3 {
-    font-size: $h3;
-  }
-
-  h4 {
-    font-size: $h4;
-  }
-
-  h5 {
-    font-size: $h5;
-  }
-}
 
 // Link styling
 a {

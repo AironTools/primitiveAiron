@@ -13,23 +13,6 @@
   clear: both;
 }
 
-// Text alignment
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
 // Display
 .block {
   display: block;
@@ -48,12 +31,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-// Responsive images
-.responsive-image {
-  max-width: 100%;
-  height: auto;
 }
 
 // Display State
@@ -151,30 +128,6 @@
 
 .align-center {
   align-items: center;
-}
-
-// Screen reader text for accessibility
-.screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
-.highlighted-paragraph {
-  font-size: 1.5rem;
-  line-height: 1.4;
-}
-
-.informative-paragraph {
-  font-size: 1.25rem;
-  line-height: 1.4;
-}
-
-.short-paragraph {
-  font-size: 1rem;
-  line-height: 1.6;
 }
 
 .border-radius {
