@@ -602,16 +602,6 @@ dd {
     padding: 60px 0;
   }
 }
-img {
-  border-radius: 8px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  object-fit: contain;
-  max-height: 100%;
-  max-width: 100%;
-  display: block;
-  margin: auto auto;
-}
-
 /**
  * Grid
  */
@@ -628,6 +618,7 @@ img {
 
 .flex-row {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -932,6 +923,61 @@ a.full-button {
   width: 100%;
 }
 
+img {
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.image-xs {
+  width: 100px;
+  height: auto;
+}
+
+.image-s {
+  width: 150px;
+  height: auto;
+}
+
+.image-m {
+  width: 200px;
+  height: auto;
+}
+
+.image-l {
+  width: 300px;
+  height: auto;
+}
+
+.image-xl {
+  width: 400px;
+  height: auto;
+}
+
+.image-xxl {
+  width: 800px;
+  height: auto;
+}
+
+.image-shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.image-bordered {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.image-round {
+  border-radius: 50%;
+}
+
+.image-square {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
 /**
  * Forms
  */
@@ -950,7 +996,7 @@ a.full-button {
 }
 
 [type=color]:hover, [type=date]:hover, [type=datetime]:hover, [type=datetime-local]:hover, [type=email]:hover, [type=month]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=url]:hover, [type=week]:hover, [type=time]:hover, select:hover, textarea:hover {
-  border: 2px solid hsl(0, 0%, 100.3921568627%);
+  border: 2px solid #666666;
 }
 
 [type=color]:focus, [type=color]:active, [type=date]:focus, [type=date]:active, [type=datetime]:focus, [type=datetime]:active, [type=datetime-local]:focus, [type=datetime-local]:active, [type=email]:focus, [type=email]:active, [type=month]:focus, [type=month]:active, [type=number]:focus, [type=number]:active, [type=password]:focus, [type=password]:active, [type=search]:focus, [type=search]:active, [type=tel]:focus, [type=tel]:active, [type=text]:focus, [type=text]:active, [type=url]:focus, [type=url]:active, [type=week]:focus, [type=week]:active, [type=time]:focus, [type=time]:active, select:focus, select:active, textarea:focus, textarea:active {

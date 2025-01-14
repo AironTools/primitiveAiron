@@ -157,7 +157,7 @@ $buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button
 $input-background: #ffffff !default;
 $placeholder: color.adjust($accent-color, $lightness: 20%) !default;
 $form-border: 2px solid $border-color !default;
-$form-border-hover: 2px solid  color.adjust($accent-color, $lightness: 20%) !default;
+$form-border-hover: 2px solid  color.adjust($font-color, $lightness: 20%) !default;
 $form-border-focus: 2px solid $link-color !default;
 
 //==============================================================================

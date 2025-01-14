@@ -246,13 +246,3 @@ dd {
     padding: $content-padding;
   }
 }
-
-img{
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  object-fit:contain;
-  max-height: 100%;
-  max-width: 100%;    
-  display: block;
-  margin: auto auto;
-}

@@ -1,0 +1,40 @@
+$image-sizes: (
+  xs: 100px,
+  s: 150px,
+  m: 200px,
+  l: 300px,
+  xl: 400px,
+  xxl: 800px,
+);
+img{
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  border-radius: $border-radius;
+  object-fit: contain;
+}
+@each $key, $value in $image-sizes {
+  .image-#{$key} {
+    width: $value;
+    height: auto;
+  }
+}
+// Sombras
+.image-shadow {
+  box-shadow: $box-shadow;
+}
+
+// Bordes
+.image-bordered {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+// Redondeadas
+.image-round {
+  border-radius: 50%;
+}
+
+.image-square {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
